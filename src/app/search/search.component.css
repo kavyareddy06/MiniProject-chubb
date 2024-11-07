@@ -1,0 +1,17 @@
+/* menu.component.css */
+.menu-item {
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .menu-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item img:hover {
+    transform: scale(1.05);
+  }
+  
