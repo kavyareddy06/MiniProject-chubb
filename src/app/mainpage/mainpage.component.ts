@@ -1,5 +1,5 @@
 import { Component ,ChangeDetectorRef, OnInit} from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -25,9 +25,13 @@ export class MainpageComponent {
   constructor(
     private cdr: ChangeDetectorRef,
     public cartService: CartService,
-    public authService: AuthService
+    public authService: AuthService,
+    private router:Router
   ) {}
-
+ 
+  navigateToSearch() {
+    this.router.navigate(['/search']);
+  }
   openSignInSidebar() {
     this.isSidebarOpen = true;
     this.isSignup = false;
